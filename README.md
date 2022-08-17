@@ -1,37 +1,16 @@
-<p align="center">
- <img width="300" src="https://res.cloudinary.com/zagatti/image/upload/v1597454271/validations-br/logo_w11ekb.png" alt="validations-br">
-</p>
-
-
-<h3 align="center">
-  Validações de forma fácil ✅
-</h3>
-
-<br />
-
-Leia isso em outras línguas: [English](https://github.com/reactivando/validations-br/blob/master/README.en.md)
-
-<div align="center">
-
-[![npm](https://img.shields.io/npm/v/validations-br.svg?color=%23007ec6&style=plastic)](https://www.npmjs.com/package/validations-br)<space><space>
-[![Coverage Status](https://img.shields.io/coveralls/github/reactivando/validations-br?color=007ec6&style=plastic)](https://coveralls.io/github/reactivando/validations-br?branch=master)
-[![License](https://img.shields.io/github/license/reactivando/validations-br?color=007ec6&style=plastic)](https://github.com/reactivando/validations-br/blob/master/LICENSE)
-
-</div>
-
 # Visão geral
 
-Validations BR é um cinto de ferramentas de funções para validar documentos padrões no Brasil e mais.
+Easy BR Validations é composta por funções para realizar a validação de documentos padrões no Brasil e mais.
 
 # Instalação
 
 Com npm:
 ```bash
-npm install validations-br
+npm install bsk-validations
 ``` 
 Com yarn:
 ```bash
-yarn add validations-br
+yarn add bsk-validations
 ```
 
 # Como usar
@@ -46,8 +25,8 @@ yarn add validations-br
 | value |                       `string`                       |           Valor que será validado |
 
 ```js
-import { useValidationsBR } from 'validations-br';
-// const { useValidationsBR } = require('validations-br');
+import { useValidationsBR } from 'bsk-validations';
+// const { useValidationsBR } = require('bsk-validations');
 
 const cnpj = '09.015.844/0001-80';
 const isValid = useValidationsBR('cnpj', cnpj);
@@ -56,8 +35,8 @@ const isValid = useValidationsBR('cnpj', cnpj);
 ## Validar CNPJ
 
 ```js
-import { validateCNPJ } from 'validations-br';
-// const { validateCNPJ } = require('validations-br');
+import { validateCNPJ } from 'bsk-validations';
+// const { validateCNPJ } = require('bsk-validations');
 
 
 const cnpj = '09.015.844/0001-80';
@@ -67,8 +46,8 @@ const isValid = validateCNPJ(cnpj);
 ## Validar CPF
 
 ```js
-import { validateCPF } from 'validations-br';
-// const { validateCPF } = require('validations-br');
+import { validateCPF } from 'bsk-validations';
+// const { validateCPF } = require('bsk-validations');
 
 const cpf = '370.785.180-04';
 const isValid = validateCPF(cpf);
@@ -77,8 +56,8 @@ const isValid = validateCPF(cpf);
 ## Validação de CPF e CNPJ no mesmo input
 
 ```js
-import { validateCPFCNPJ } from 'validations-br';
-// const { validateCPFCNPJ } = require('validations-br');
+import { validateCPFCNPJ } from 'bsk-validations';
+// const { validateCPFCNPJ } = require('bsk-validations');
 
 
 const cpf_cnpj = '09.015.844/0001-80';
@@ -88,8 +67,8 @@ const isValid = validateCPFCNPJ(cpf_cnpj);
 ## Validar Inscrição Estadual
 
 ```js
-import { validateIE } from 'validations-br';
-// const { validateIE } = require('validations-br');
+import { validateIE } from 'bsk-validations';
+// const { validateIE } = require('bsk-validations');
 
 const ie = '535.371.880.779';
 const isValid = validateIE(ie, 'sp');
@@ -98,8 +77,8 @@ const isValid = validateIE(ie, 'sp');
 ## Validar PIS/PASEP
 
 ```js
-import { validatePIS } from 'validations-br';
-// const { validatePIS } = require('validations-br');
+import { validatePIS } from 'bsk-validations';
+// const { validatePIS } = require('bsk-validations');
 
 const pis = '833.28281.34-7';
 const isValid = validatePIS(pis);
@@ -108,8 +87,8 @@ const isValid = validatePIS(pis);
 ## Validar Telefone
 
 ```js
-import { validatePhone } from 'validations-br';
-// const { validatePhone } = require('validations-br');
+import { validatePhone } from 'bsk-validations';
+// const { validatePhone } = require('bsk-validations');
 
 const phone = '(14) 99767-9472';
 const isValid = validatePhone(phone);
@@ -118,8 +97,8 @@ const isValid = validatePhone(phone);
 ## Validar CEP
 
 ```js
-import { validateCEP } from 'validations-br';
-// const { validateCEP } = require('validations-br');
+import { validateCEP } from 'bsk-validations';
+// const { validateCEP } = require('bsk-validations');
 
 const cep = '17280-000';
 const isValid = validateCEP(cep);
@@ -128,20 +107,18 @@ const isValid = validateCEP(cep);
 ## Validar UF
 
 ```js
-import { validateUF } from 'validations-br';
-// const { validateUF } = require('validations-br');
+import { validateUF } from 'bsk-validations';
+// const { validateUF } = require('bsk-validations');
 
 const uf = 'SP';
 const isValid = validateUF(uf);
 ```
 
-## Bônus
-
 ## Validar E-mail
 
 ```js
-import { validateEmail } from 'validations-br';
-// const { validateEmail } = require('validations-br');
+import { validateEmail } from 'bsk-validations';
+// const { validateEmail } = require('bsk-validations');
 
 const email = 'johndoe@gmail.com';
 const isValid = validateEmail(email);
@@ -149,10 +126,10 @@ const isValid = validateEmail(email);
 
 # Integrações
 
-## Com Yup
+## Yup
 
 ```js
-import { validateCNPJ } from "validations-br";
+import { validateCNPJ } from "bsk-validations";
 import * as Yup from "yup";
 
 try {
@@ -168,10 +145,10 @@ try {
 }
 ```
 
-## Com Joi
+## Joi
 
 ```js
-import { validateCNPJ } from "validations-br";
+import { validateCNPJ } from "bsk-validations";
 import Joi from "joi";
 
 try {
@@ -186,26 +163,3 @@ try {
   console.log(err.message);
 }
 ```
-
-# Como contribuir
-
-Fique a vontade para contribuir com o projeto. Nós só pedimos para que:
-
- - Dê fork (https://github.com/reactivando/validations-br/fork)
- - Crie sua branch da feature/fix (git checkout -b feature/fooBar)
- - Escreva os testes para a nova feature ou do bug fix resolvido
- - Faça o commit das mudanças (git commit -am 'feat: add some fooBar')
- - Siga os padrões de commit [conventional-changelog](https://github.com/ajoslin/conventional-changelog) descritos em 
-[conventional-conventions](https://github.com/ajoslin/conventional-changelog/blob/master/conventions/angular.md)
- - Dê push dá branch para seu repositório (git push origin feature/fooBar)
- - Tenha certeza que os testes passaram antes de abrir a pull-request (Use: `$ yarn test` or `$ npm run test`)
- - Crie uma nova Pull Request
-
-# Autores
-
-- André Zagatti [@azagatti](https://linkedin.com/in/andre-zagatti/)
-
-- Ariel Franco [@arielff3](https://www.linkedin.com/in/ariel-franco-ferreira-37b42b17a/)
-
-# Licença
-MIT © [Reactivando](https://github.com/reactivando)
